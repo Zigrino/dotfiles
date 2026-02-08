@@ -103,9 +103,9 @@ require("lazy").setup({
       "neovim/nvim-lspconfig"
   },
 
-{
-    "evesdropper/luasnip-latex-snippets.nvim",
-},
+-- {
+--     "evesdropper/luasnip-latex-snippets.nvim",
+-- },
 
 {
     'nvim-lualine/lualine.nvim',
@@ -163,6 +163,11 @@ require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
 
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+
+require("luasnip").config.set_config({
+    enable_autosnippets = true
+})
+
 --sketchy ahh chatgpt
 vim.keymap.set("n", "<leader>rr", function()
   vim.cmd("source $MYVIMRC")

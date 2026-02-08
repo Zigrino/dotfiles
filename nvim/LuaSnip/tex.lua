@@ -64,6 +64,16 @@ return {
   i(1),
   t({ "", "\\end{proof}" }),
 }),
+  s({
+    trig = "%$%$",
+    regTrig = true,
+    wordTrig = false,
+    snippetType = "autosnippet",
+  }, {
+    t("$"),
+    i(1),
+    t("$"),
+  }),
 
 }
 
